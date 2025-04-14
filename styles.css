@@ -1,0 +1,746 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/**************************************************************/
+/* التأثيرات عند المرور على العنصر */
+.nav-link.hovered {
+  color: #fbfbf9;
+  background: #04e5e9;
+  font-size: 22px;
+  transform: scale(1.2);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Header styles */
+.site-header {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0a21f2;
+}
+
+.main-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  color: #374151;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle i {
+  font-size: 24px;
+}
+
+/* Main content styles */
+.site-main {
+  flex: 1;
+}
+
+/* Hero section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px;
+  background: linear-gradient(90deg, #2563eb 0%, #1e40af 100%);
+}
+
+.hero-content {
+  max-width: 768px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 32px;
+}
+
+.hero-description {
+  font-size: 20px;
+  color: #dbeafe;
+  margin-bottom: 32px;
+}
+
+.cta-button {
+  background-color: #fff;
+  color: #2563eb;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hosting solutions section */
+.hosting-solutions {
+  padding: 80px;
+  background-color: #fff;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/**/
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+    /* الأنماط الحالية تبقى كما هي */
+      transition: all 0.3s ease;
+      cursor: pointer;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow:
+    0px 4px 6px 0px rgba(0, 0, 0, 0.1),
+    0px 10px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card.featured {
+  border: 2px solid #2563eb;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0px 6px 10px 0px rgba(0, 0, 0, 0.15),
+    0px 15px 25px 0px rgba(0, 0, 0, 0.15);
+  border: 1px solid #2563eb;
+}
+
+.pricing-card.featured:hover {
+  border: 2px solid #2563eb;
+  /* الحفاظ على الحدود السميكة للبطاقة المميزة */
+}
+/* ajoute de code ça */
+.card-hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0px 6px 10px 0px rgba(0, 0, 0, 0.15),
+    0px 15px 25px 0px rgba(0, 0, 0, 0.15);
+  border: 1px solid #2563eb !important;
+  transition: all 0.3s ease;
+}
+/**/
+
+
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.icon-large {
+  width: 30px;
+  height: 30px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.card-description {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 24px;
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  list-style: none;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-small {
+  width: 14px;
+  height: 16px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.price-period {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.select-button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Technologies section */
+.technologies-section {
+  padding: 80px;
+  background-color: #f3f4f6;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 32px;
+}
+
+/************************************************************************/
+/*.tech-item.hovered {
+  color: #fbfbf9;
+  font-size: 26px;
+  transform: scale(1.2);
+}
+
+.tech-item.featured:hover {
+  border: 2px solid #2563eb;
+}
+
+.tech-item:hover {
+  font-size: 26px;
+  transform: scale(1.2) translateY(-5px);
+  box-shadow:
+    0px 6px 10px 0px rgba(0, 0, 0, 0.15),
+    0px 15px 25px 0px rgba(0, 0, 0, 0.15);
+  border: 1px solid #2563eb;
+}
+
+.tech-item:hover .tech-name {
+  font-family: 'Arial', sans-serif;
+  opacity: 1;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.tech-item {
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.tech-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.tech-icon {
+  width: 10px;
+  height: 10px;
+  margin-bottom: 8px;
+}*/
+.tech-item {
+  width: 150px;
+  /* Largeur du carré */
+  height: 150px;
+  /* Hauteur du carré */
+  background-color: #fff;
+  /* Fond blanc */
+  border-radius: 12px;
+  /* Coins arrondis */
+  display: flex;
+  /* Utilisation du flexbox */
+  flex-direction: column;
+  /* Disposition verticale pour l'icône et le texte */
+  align-items: center;
+  /* Centre horizontalement */
+  justify-content: center;
+  /* Centre verticalement */
+  text-align: center;
+  /* Assure que le texte est centré */
+  transition: all 0.3s ease;
+  /* Transition pour les effets de survol */
+}
+
+.tech-name {
+  font-size: 18px;
+  /* Taille de la police */
+  font-weight: bold;
+  /* Poids de la police */
+  color: #2563eb;
+  /* Couleur du texte */
+  transition: all 0.3s ease;
+  /* Transition pour l'effet hover */
+}
+
+.tech-icon {
+  width: 40px;
+  /* Taille de l'icône */
+  height: 40px;
+  /* Taille de l'icône */
+  margin-bottom: 8px;
+  /* Espace entre l'icône et le texte */
+}
+
+/* Effet de survol global */
+.tech-item:hover {
+  font-size: 26px;
+  /* Taille de la police survolée */
+  transform: scale(1.2) translateY(-5px);
+  /* Agrandissement et léger décalage vers le haut */
+  box-shadow:
+    0px 6px 10px 0px rgba(0, 0, 0, 0.15),
+    0px 15px 25px 0px rgba(0, 0, 0, 0.15);
+  /* Ombre portée */
+  border: 1px solid #2563eb;
+  /* Bordure bleue */
+}
+
+/* Effet de survol pour le texte */
+.tech-item:hover .tech-name {
+  font-family: 'Arial', sans-serif;
+  /* Changer la police */
+  opacity: 1;
+  /* Rendre le texte complètement opaque */
+  color: #2563eb;
+  /* Couleur bleue lors du survol */
+}
+
+/* Effet pour les éléments "featured" */
+.tech-item.featured:hover {
+  border: 2px solid #2563eb;
+  /* Bordure bleue épaisse */
+}
+
+/* Effet lorsqu'un élément est survolé et dans un état "hovered" */
+.tech-item.hovered {
+  color: #fbfbf9;
+  /* Changer la couleur du texte */
+  font-size: 26px;
+  /* Augmenter la taille du texte */
+  transform: scale(1.2);
+  /* Agrandir l'élément */
+}
+
+/* Order section */
+.order-section {
+  padding: 80px;
+}
+
+.order-container {
+  max-width: 896px;
+  margin: 0 auto;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow:
+    0px 4px 6px 0px rgba(0, 0, 0, 0.1),
+    0px 10px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-select {
+  height: 43px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: #fff;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.config-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.config-option {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 17px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.option-label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.order-summary {
+  padding: 24px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+.summary-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-value {
+  font-weight: 500;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 16px;
+}
+
+.total-label,
+.total-value {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.order-button {
+  width: 100%;
+  padding: 16px 0;
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* Resources section */
+.resources-section {
+  padding: 80px;
+  background-color: #f3f4f6;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.resource-icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 16px;
+}
+
+.resource-description {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 24px;
+}
+
+.resource-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Footer styles */
+.site-footer {
+  background-color: #111827;
+  color: #fff;
+  padding: 48px 80px;
+}
+
+.footer-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.company-description {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-heading {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+}
+
+.footer-item {
+  font-size: 14px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icon {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.social-icon i {
+  font-size: 20px;
+}
+
+.copyright {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #374151;
+  text-align: center;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .site-header,
+  .hero-section,
+  .hosting-solutions,
+  .technologies-section,
+  .order-section,
+  .resources-section,
+  .site-footer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+  }
+
+  .pricing-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .resources-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .config-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header,
+  .hero-section,
+  .hosting-solutions,
+  .technologies-section,
+  .order-section,
+  .resources-section,
+  .site-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .pricing-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resources-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .form-row {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .config-options {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
